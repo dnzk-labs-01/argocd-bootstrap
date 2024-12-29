@@ -4,7 +4,7 @@ metadata:
   name: banking-bootstrap
   namespace: argocd
 spec:
-  project: default
+  project: bootstrap
   source:
     repoURL: https://github.com/dnzk-labs-01/banking-argocd-bootstrap
     targetRevision: HEAD
