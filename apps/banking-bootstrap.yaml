@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: banking-bootstrap
+  name: banking-argocd-bootstrap
   namespace: argocd
 spec:
   project: bootstrap
@@ -9,6 +9,8 @@ spec:
     repoURL: https://github.com/dnzk-labs-01/banking-argocd-bootstrap
     targetRevision: HEAD
     path: .
+    directory:
+      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
